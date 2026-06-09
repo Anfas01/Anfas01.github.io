@@ -7,15 +7,17 @@ menuBtn.addEventListener("click", () => {
 
 const reveals = document.querySelectorAll(".reveal");
 
-function revealSections() {
-  reveals.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-
-    if (top < window.innerHeight - 100) {
-      section.classList.add("active");
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+      // Stop observing once the animation has triggered
+      revealObserver.unobserve(entry.target);
     }
   });
-}
+}, {
+  threshold: 0.1, // Trigger when 10% of the element is visible
+  rootMargin: "0px 0px -100px 0px" // Similar to your -100px logic
+});
 
-window.addEventListener("scroll", revealSections);
-revealSections();
+reveals.forEach(section => revealObserver.observe(section));
