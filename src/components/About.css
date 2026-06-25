@@ -1,0 +1,22 @@
+
+.about-content{
+  max-width:800px;
+  padding-left:2rem;
+  border-left:3px solid var(--accent);
+}
+
+.about-content p{
+  margin-bottom:1.5rem;
+  font-size:1.05rem;
+}
+
+.about-content span{
+  color:var(--text);
+  font-weight:600;
+}
+
+@media(max-width:768px){
+  .about-content{
+    padding-left:1rem;
+  }
+}

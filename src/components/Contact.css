@@ -1,0 +1,11 @@
+
+#contact p{
+  margin-bottom:1rem;
+}
+
+.email{
+  display:inline-block;
+  font-size:1.2rem;
+  color:var(--accent);
+  font-weight:600;
+}

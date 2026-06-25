@@ -1,0 +1,19 @@
+
+.skills-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+}
+
+.skills-grid div{
+  padding:12px 20px;
+  border-radius:999px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  transition:.3s;
+}
+
+.skills-grid div:hover{
+  transform:translateY(-4px);
+  border-color:var(--accent);
+}

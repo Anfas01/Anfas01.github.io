@@ -1,0 +1,87 @@
+
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(10,10,10,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+nav{
+  height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:1.3rem;
+  font-weight:700;
+  color:var(--accent);
+  letter-spacing:2px;
+}
+
+.nav-links{
+  display:flex;
+  gap:2rem;
+}
+
+.nav-links a{
+  color:var(--muted);
+  transition:.3s;
+  position:relative;
+}
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0;
+  height:2px;
+  background:var(--accent);
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:var(--text);
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+@media(max-width:768px){
+
+  .menu-btn{
+    display:flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: #0a0a0a;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    
+    /* 1. Remove display:none and use these instead */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    
+    /* 2. Transition all the changing properties */
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  }
+
+  .nav-links.active{
+    opacity:1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}

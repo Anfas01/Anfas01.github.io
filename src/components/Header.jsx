@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import './Header.css'
+
 function Header() {
 
   const [isOpen, setIsOpen] = useState(false)
@@ -21,7 +23,7 @@ function Header() {
         </ul>
 
         <div className="menu-btn" onClick={toggleMenu}>
-          <i className={`fa-solid ${isOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
+          <i className={`fa-solid ${isOpen ? 'fa-xmark' : 'fa-ellipsis fa-rotate-90'}`}></i>
         </div>
       </nav>
     </header>

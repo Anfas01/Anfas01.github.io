@@ -1,4 +1,5 @@
 
+import './Projects.css'
 
 function Projects() {
   return (
@@ -8,42 +9,71 @@ function Projects() {
       <div className="projects-grid">
 
         <article className="project-card">
-          <span>01</span>
+          <img
+            src="/portfolio.png"
+            alt="Portfolio Website"
+            className="project-image"
+          />
 
-          <h3>E-Commerce Website</h3>
-
-          <p>
-            Responsive e-commerce website featuring product pages,
-            shopping cart functionality and a modern UI.
-          </p>
-
-          <div className="project-links">
-
-            <a href="https://ecommerce-website-iota-tan.vercel.app/" target="_blank">
-              Live Demo
-            </a>
-
-            <a href="https://github.com/Anfas01/ecommerce-website" target="_blank">
-              Source Code
-            </a>
-
-          </div>
-        </article>
-
-        <article className="project-card">
-          <span>02</span>
+          <span className="project-number">01</span>
 
           <h3>Portfolio Website</h3>
 
           <p>
-            Personal portfolio built with a minimalist design and
-            responsive layout.
+            Modern personal portfolio built with React, featuring a responsive
+            design, smooth user experience, and project showcase section.
           </p>
 
           <div className="project-links">
-            <a href="#">Live Demo</a>
-            <a href="https://github.com/Anfas01/Anfas01.github.io" target="_blank">
-              Source Code
+            <a
+              href="https://anfas01.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live Demo ↗
+            </a>
+
+            <a
+              href="https://github.com/Anfas01/Anfas01.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <article className="project-card">
+          <img
+            src="/e-commerce.png"
+            alt="E-Commerce Website"
+            className="project-image"
+          />
+
+          <span className="project-number">02</span>
+
+          <h3>E-Commerce Website</h3>
+
+          <p>
+            Responsive e-commerce website with product browsing,
+            cart functionality and a clean shopping experience.
+          </p>
+
+          <div className="project-links">
+            <a
+              href="https://ecommerce-website-iota-tan.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live Demo ↗
+            </a>
+
+            <a
+              href="https://github.com/Anfas01/ecommerce-website"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
             </a>
           </div>
         </article>
